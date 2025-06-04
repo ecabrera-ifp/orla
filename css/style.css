@@ -1,0 +1,179 @@
+body {
+    
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cormorant:ital,wght@0,300..700;1,300..700&display=swap');
+
+
+h1 {
+    font-family: "cinzel";
+    font-weight: 900 ;
+    font-size: 4rem;
+    text-align: center;
+    line-height: 13rem;
+    top: 0;
+    left: 0;
+    right: 0;
+
+}
+
+.total {
+    display: flex;
+    justify-content: center;   
+    gap: 20px;                 
+    flex-wrap: wrap; 
+
+}
+
+.cuadros {
+    width: 100%;
+    font-size: 0px;
+    height: 1500px;
+    background-color: aqua;
+    float: left;
+
+
+}
+
+.contenedor {
+    position: relative;
+    width: 300px;
+    height: 600px;
+    display: inline-block;
+    transition: opacity 0.3s ease;
+  }
+
+  .cuadro1, .cuadro2, .cuadro3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: top 0.5s ease;
+  }
+
+  .cuadro1 {
+    width: 232px;
+    height: 600px;
+    z-index: 1;
+  }
+
+  .cuadro2 {
+    width: 232px;
+    height: 450px;
+    top: 120px;
+    z-index: 2;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 30px;
+    border: 3px solid orange;
+    border-radius: 5px 5px 20px 20px;
+    transform-origin: bottom center;
+    transform: rotateX; 
+    transition: all 0.6s ease;
+    backface-visibility: hidden;
+
+
+  }
+
+
+  .cuadro2 img {
+    width: 98px;
+    height: 98px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid orange;
+    position: absolute;
+  }
+
+  .texto-cuadro2 {
+    margin-top: 200px;
+    color: orange;
+    font-family: "cinzel";
+    font-size: 1.7rem;
+    text-align: center;
+  }
+
+  .cuadro3 {
+    width: 232px;
+    height: 300px;
+    top: 300px;
+    background: linear-gradient( orange, coral);
+    z-index: 10;
+    border: 3px solid orange;
+    border-radius: 10px 10px 20px 20px;
+
+  }
+
+  .cuadro3 .nom {
+    align-items: center;
+    justify-content: center;
+    color: yellow;
+    font-weight: bold;
+    text-align: center;
+    font-family: "cinzel";
+    font-weight: 700 ;
+    font-size: 2rem;
+    text-align: center;
+    top: 20px;
+    left: 0;
+    right: 0;
+    padding-top: 60px; 
+    display: flex;
+    flex-direction: column; 
+    transform: scale(1);
+    transition: transform 0.4s ease;
+   
+}
+
+.cuadro3 .nom1 {
+    align-items: center;
+    justify-content: center;
+    color: yellow;
+    font-weight: bold;
+    text-align: center;
+    font-family: "cinzel";
+    font-weight: 700 ;
+    font-size: 2rem;
+    text-align: center;
+    top: 0px;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column; 
+    transform: scale(1);
+    transition: transform 0.4s ease;
+}
+
+/* Todos en gris al inicio */
+.total .contenedor {
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    filter: grayscale(100%);
+  }
+  
+  .miniatura.semi-transparent {
+    opacity: 0.5;
+  }
+  
+  .miniatura.semi-transparent:hover {
+    opacity: 0.5;
+  }
+  
+  .contenedor:hover {
+    opacity: 0.5;
+    filter: grayscale(0%);
+  }
+
+  /* Animación tipo carta al hacer hover */
+.contenedor:hover .cuadro2 {
+    top: 0px; 
+    transform: rotateX(0deg);
+  }
+
+.contenedor:hover .nom,
+.contenedor:hover .nom1 {
+  transform: scale(1.3);
+
+}
+
+ 
